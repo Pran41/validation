@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+
+</head>
+
+<body>
+<script>
+    function validateFrom() {
+        var x = document.forms["myFrom"]["fname"].value;
+        if ( x == "" ) {
+            alert("all froms must be filled out");
+            return false;
+        }
+        else document.write("From submitted");
+
+    }
+</script>
+
+<from name="myFrom" onsubmit="validateFrom()">
+    Name: <input type="text" name="fname">
+    <input type="submit" value="Submit">
+    <p id="messege"></p>
+</from>
+</body>
+</html>
